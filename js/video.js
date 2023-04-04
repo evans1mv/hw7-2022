@@ -44,6 +44,13 @@ document.querySelector("#mute").addEventListener("click", function() {
     
 }); 
 
+var output = document.getElementById("volume");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value + "%";
+    video.volume = this.value/100;
+}
 
 document.querySelector("#vintage").addEventListener("click", function() {
     video.classList.add("oldSchool");
