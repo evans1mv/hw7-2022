@@ -45,7 +45,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 }); 
 
 var output = document.getElementById("volume");
-output.innerHTML = slider.value;
+output.innerHTML = slider.value + "%";
 
 slider.oninput = function() {
     output.innerHTML = this.value + "%";
